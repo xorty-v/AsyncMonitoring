@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DCAD3B61-6CCA-470A-9BB6-35408D242118}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncApp.Api", "src\AsyncApp.Api\AsyncApp.Api.csproj", "{2533C81C-A7D2-4442-9332-23377128CF7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncApp.Api", "src\SyncApp.Api\SyncApp.Api.csproj", "{A33843DA-1DF4-4E32-8B23-0CB50E5F1F29}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DC9048EF-190E-4B15-8A00-35CF523254A7}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yaml = docker-compose.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2533C81C-A7D2-4442-9332-23377128CF7F} = {DCAD3B61-6CCA-470A-9BB6-35408D242118}
+		{A33843DA-1DF4-4E32-8B23-0CB50E5F1F29} = {DCAD3B61-6CCA-470A-9BB6-35408D242118}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2533C81C-A7D2-4442-9332-23377128CF7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2533C81C-A7D2-4442-9332-23377128CF7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2533C81C-A7D2-4442-9332-23377128CF7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2533C81C-A7D2-4442-9332-23377128CF7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A33843DA-1DF4-4E32-8B23-0CB50E5F1F29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A33843DA-1DF4-4E32-8B23-0CB50E5F1F29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A33843DA-1DF4-4E32-8B23-0CB50E5F1F29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A33843DA-1DF4-4E32-8B23-0CB50E5F1F29}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
