@@ -1,0 +1,19 @@
+global:
+  resolve_timeout: 5m
+
+route:
+  receiver: telegram
+
+receivers:
+  - name: telegram
+    telegram_configs:
+      - bot_token: <YOUR_TELEGRAM_BOT_TOKEN>
+        chat_id: <YOUR_TELEGRAM_CHAT_ID>
+        api_url: https://api.telegram.org
+        send_resolved: true
+        parse_mode: Markdown
+        message: |
+          🔥 *Alert:* __{{ .CommonLabels.alertname }}__
+          📍 *Job:* {{ .CommonLabels.job }}
+          🖥️ *Instance:* {{ .CommonLabels.instance }}
+          📄 *Description:* {{ .CommonAnnotations.description }}

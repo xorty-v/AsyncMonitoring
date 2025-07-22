@@ -1,0 +1,23 @@
+groups:
+  - name: http_errors
+    rules:
+      - alert: High Error Rate
+        expr: rate(http_server_request_duration_seconds_count{http_response_status_code=~"5..|4.."}[1m]) > 0
+        labels:
+          severity: critical
+        annotations:
+          summary: "High error rate in {{ $labels.instance }}"
+          description: |
+            {{ $labels.instance }} is returning status {{ $labels.http_response_status_code }}
+            on route {{ $labels.http_route }} via method {{ $labels.http_request_method }}
+
+  - name: service_availability
+    rules:
+      - alert: Service Instance Down
+        expr: up == 0
+        for: 5s
+        labels:
+          severity: critical
+        annotations:
+          summary: "Service {{ $labels.job }} is down"
+          description: "{{ $labels.instance }} has been unreachable for 10 seconds"
